@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <form action="/signup" method="POST">
+        <div>Username : <input type="text" name="username"></div>
+        <div>Password : <input type="password" name="password"></div>
+        <input type="submit" name="signup" value="Sign Up">
+    </form>
+    {{ notification }}
+{% endblock %}

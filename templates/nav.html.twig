@@ -1,0 +1,13 @@
+<nav>
+    <li>
+        {% if is_granted('ROLE_USER') %}
+            <a href="/riddles">All riddles</a>
+            <a href="/riddles/my">My riddles</a>
+            <a href="/riddles/new">New riddles</a>
+            <a href="/logout">Log out</a>
+        {% else %}
+            <a href="/signup">Sigh-Up</a>
+            <a href="/login">Log In</a>
+        {% endif %}
+    </li>
+</nav>

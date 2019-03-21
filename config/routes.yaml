@@ -1,0 +1,32 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+  path: /
+  controller: App\Controller\HomeController::index
+
+myRiddles:
+  path: /riddles/my
+  controller: App\Controller\HomeController::myRiddles
+newRiddles:
+  path: /riddles/new
+  controller: App\Controller\HomeController::newRiddles
+allRiddles:
+  path: /riddles
+  controller: App\Controller\HomeController::allRiddles
+riddle:
+  path: /riddles/{id}
+  controller: App\Controller\HomeController::riddle
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
+signup:
+  path: /signup
+  controller: App\Controller\SignUpController::signUp
+default:
+  path: /{all}
+  controller: App\Controller\HomeController::index

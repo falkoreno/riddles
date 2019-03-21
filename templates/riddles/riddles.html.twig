@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    {% for riddle in riddles %}
+        <li>
+            <a href="{{ path('riddle', {'id': riddle.id}) }}">
+                {{ riddle.id }} : {{ riddle.getTitle }}<br>
+            </a>
+        </li>
+    {% endfor %}
+{% endblock %}
